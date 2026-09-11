@@ -1,7 +1,7 @@
-# Week 1 Extra Project — Setting Up Windows 10 in VirtualBox (Networked with Kali Linux)
+# NETWORKWALKS-B083D-WK1-PM1x-SETTING UP WINDOWS !) IN VIRTUALBOX (Networked with Kali Linux)
 
-**Program:** TS Academy Cybersecurity Internship — Week 1
-**Author:** Dasilvercass
+**Program:** NETWORKWALKS CYBERSECURITY INTERNSHIP — Week 1
+**Author:** Patrick Alabi
 
 ## Project Goal
 
@@ -29,14 +29,21 @@ This lab lays the networking foundation for later, more advanced exercises (atta
 ## What Was Done
 
 1. **Downloaded the Windows 10 ISO** via the Media Creation Tool from Microsoft's official download page (with a documented backup method using browser device emulation for cases where Microsoft doesn't show a direct ISO option).
-2. **Created a new VM in VirtualBox** — named `Windows10-Lab`, attached the ISO, set OS type to Windows 10 (64-bit), allocated 4096 MB RAM and 2 CPUs, and created a 40 GB VDI virtual disk.
-3. **Installed Windows 10** from the mounted ISO using a custom installation onto the new virtual disk.
-4. **Configured the network adapter** to NAT Network, matching the same NAT Network used by the Kali VM.
-5. **Set a static IP inside Windows** (`10.0.0.10/24`, gateway `10.0.0.1`, DNS `8.8.8.8`) via the adapter's TCP/IPv4 properties.
-6. **Validated connectivity** in both directions:
+![](screenshot-1-download-windows.png)
+3. **Created a new VM in VirtualBox** — named `Windows10-Lab`, attached the ISO, set OS type to Windows 10 (64-bit), allocated 4096 MB RAM and 2 CPUs, and created a 40 GB VDI virtual disk.
+![](screenshot-2-windows-10-vm.png)
+5. **Installed Windows 10** from the mounted ISO using a custom installation onto the new virtual disk.
+![](screenshot-3-installin-windows-10.png)
+7. **Configured the network adapter** to NAT Network, matching the same NAT Network used by the Kali VM.
+![](screenshot-4-NAT-Netowrk.png)
+9. **Set a static IP inside Windows** (`10.0.0.10/24`, gateway `10.0.0.1`, DNS `8.8.8.8`) via the adapter's TCP/IPv4 properties.
+![](screenshot-5-static-ip-windows.png)
+11. **Validated connectivity** in both directions:
    - Windows → Kali: `ping 10.0.0.2`
    - Windows → Internet: `ping 8.8.8.8`
    - Kali → Windows: `ping 10.0.0.10`
+![](screenshot-6-kali-ping-windows.png)
+![](screenshot-7-windows-ping-kali.png)
 
 All three pings succeeded, confirming the Windows 10 VM and Kali Linux VM can reach each other and the internet over the shared NAT Network.
 
