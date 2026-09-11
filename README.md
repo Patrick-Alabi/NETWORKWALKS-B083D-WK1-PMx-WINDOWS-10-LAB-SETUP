@@ -53,9 +53,9 @@ This lab lays the networking foundation for later, more advanced exercises (atta
    - Windows → Internet: `ping 8.8.8.8`
    - Kali → Windows: `ping 10.0.0.10`
 
-![](screenshot-6-kali-ping-windows.png)
-
 ![](screenshot-7-windows-ping-kali.png)
+
+![](screenshot-6-kali-ping-windows.png)
 
 All three pings succeeded, confirming the Windows 10 VM and Kali Linux VM can reach each other and the internet over the shared NAT Network.
 
